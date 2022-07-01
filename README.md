@@ -1,19 +1,9 @@
-# redditsaver
+# Reddit Mp3 Video Saver
 
-A new Flutter project.
+Flutter Downloader & Flutter http & Flutter provider & Flutter handler 
 
-## Getting Started
+Working system :
+It removes the slash at the end of the reddit link you entered and adds .json to the end.
+Then it takes the mp3 video of reddit with fallback_url from the opened online json file.
+Using the Flutter Downloader library, the mp3 file is downloaded to the mobile device of the person.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# Reddit-Video-Saver" 
-"# Reddit-Video-Saver" 
-"# Reddit-Video-Saver" 
