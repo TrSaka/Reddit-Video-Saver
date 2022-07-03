@@ -2,18 +2,11 @@
 import 'dart:convert';
 import 'dart:isolate';
 import 'dart:ui';
-
 import 'package:flutter_downloader/flutter_downloader.dart';
 import 'package:http/http.dart';
-import 'package:internet_connection_checker/internet_connection_checker.dart';
-import 'dart:async';
 import 'package:flutter/material.dart';
-import 'package:flutter_easyloading/flutter_easyloading.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:permission_handler/permission_handler.dart';
-import 'package:redditsaver/Pages/DownloadPage.dart';
-import 'package:redditsaver/Pages/MainPage.dart';
-import 'package:redditsaver/dialog/dialoghelper.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -91,7 +84,6 @@ class _MainScreenState extends State<MainScreen> {
         progress = message;
       });
     });
-    // TODO: implement initState
     FlutterDownloader.registerCallback(downloadCallback);
     super.initState();
     controller1.text = "";
@@ -142,19 +134,16 @@ class _MainScreenState extends State<MainScreen> {
                   ),
                 ),
                 Padding(
-                  padding: EdgeInsets.only(top: 30),
-                  child: Text(
-                    "Enter your post link here !",
-                    style: TextStyle(
-                        color: Colors.orange.shade900,
-                        fontWeight: FontWeight.w500,
-                        fontStyle: FontStyle.italic,
-                        fontSize: 24),
-                  ),
-                ),
-                SizedBox(
-                  height: 20,
-                ),
+                    padding: EdgeInsets.only(top: 30),
+                    child: Text(
+                      "Enter your post link here !",
+                      style: TextStyle(
+                          color: Colors.orange.shade900,
+                          fontWeight: FontWeight.w500,
+                          fontStyle: FontStyle.italic,
+                          fontSize: 24),
+                    )),
+                SizedBox(height: 20),
                 TextField(
                   controller: controller1,
                   cursorColor: Colors.orange.shade900,
@@ -169,9 +158,7 @@ class _MainScreenState extends State<MainScreen> {
                     labelText: "Paste yor link here...",
                   ),
                 ),
-                SizedBox(
-                  height: 40,
-                ),
+                SizedBox(height: 40),
                 InkWell(
                   onTap: () {
                     if (controller1.text.length > 2) {
